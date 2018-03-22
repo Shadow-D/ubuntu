@@ -1,0 +1,81 @@
+版本ubuntu17.10
+
+修改默认python版本
+sudo apt-get install python3.7
+rm /usr/bin/python
+ln -s /usr/bin/python3.7 /usr/bin/python
+sudo vim /etc/profile
+添加路径
+PATH=/usr/bin:$PATH
+export PATH
+
+
+安装配置java
+官网下载jre-8u162-linux-x64.tar.gz
+sudo tar -zxvf /home/shadz/下载/jre-8u162-linux-x64.tar.gz -C /usr
+sudo vim /etc/profile
+添加路径
+JAVA_HOME=/usr/jdk1.8.0_162
+PATH=$JAVA_HOME/bin:$PATH
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar: $JAVA_HOME/lib/tools.jar
+export JAVA_HOME
+export PATH
+export CLASSPATH
+
+
+安装pycharm
+sudo snap install pycharm-community --classic
+
+
+安装eclipse
+sudo tar -zxvf /home/shadz/下载/eclipse-inst-linux64.tar.gz -C /usr
+cd /usr/eclipse-installer
+./eclipse-inst
+执行安装程序，安装路径为
+/home/shadz/eclipse/jee-oxygen
+建立启动图标
+sudo gedit /usr/share/applications/eclipse.desktop
+输入以下内容
+[Desktop Entry]
+Encoding=UTF-8
+Name=Eclipse    
+Comment=Eclipse IDE
+Exec=/home/shadz/eclipse/jee-oxygen/eclipse/eclipse 
+Icon=/home/shadz/eclipse/jee-oxygen/eclipse/icon.xpm 
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=Application;Development;
+对文件进行赋权
+sudo chmod u+x /usr/share/applications/eclipse.desktop
+
+
+安装mysql
+sudo apt-get install mysql-server
+
+
+安装wineqq
+安装wine
+sudo add-apt-repository ppa:wine/wine-builds
+sudo apt-get update
+sudo apt-get install winehq-devel
+下载wineqq，云盘https://pan.baidu.com/s/1nu8UXiL
+sudo tar -xvf /home/shadz/下载/wineQQ8.9_19990.tar.xz -C /usr
+
+
+安装tomcat
+下载apache-tomcat-9.0.6.tar.gz
+sudo tar -xzvf /home/shadz/下载/apache-tomcat-9.0.6.tar.gz -C /usr
+sudo vim /etc/profile
+添加
+export PATH
+CATALINA_HOME=/usr/apache-tomcat-9.0.6
+cd /usr/apache-tomcat-9.0.6/bin
+sudo vim catalina.sh
+添加
+CATALINA_HOME=/usr/apache-tomcat-9.0.6
+JAVA_HOME=/usr/jdk1.8.0_162
+安装tomcat
+sudo cp catalina.sh /etc/init.d/tomcat
+sudo chmod u+x /etc/init.d/tomcat
+update-rc.d –f tomcat defaults 
