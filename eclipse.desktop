@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Eclipse    
+Comment=Eclipse IDE
+Exec=/home/shadz/eclipse/jee-oxygen/eclipse/eclipse 
+Icon=/home/shadz/eclipse/jee-oxygen/eclipse/icon.xpm 
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=Application;Development;
