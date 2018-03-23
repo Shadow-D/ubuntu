@@ -29,19 +29,8 @@ cd /usr/eclipse-installer
 ./eclipse-inst
 执行安装程序，安装路径为
 /home/shadz/eclipse/jee-oxygen
-建立启动图标
+编辑启动图标
 sudo gedit /usr/share/applications/eclipse.desktop
-输入以下内容
-[Desktop Entry]
-Encoding=UTF-8
-Name=Eclipse    
-Comment=Eclipse IDE
-Exec=/home/shadz/eclipse/jee-oxygen/eclipse/eclipse 
-Icon=/home/shadz/eclipse/jee-oxygen/eclipse/icon.xpm 
-Terminal=false
-StartupNotify=true
-Type=Application
-Categories=Application;Development;
 对文件进行赋权
 sudo chmod u+x /usr/share/applications/eclipse.desktop
 
@@ -69,8 +58,7 @@ sudo vim /usr/apache-tomcat-9.0.6/bin/catalina.sh
 开头添加
 export CATALINA_HOME=/usr/apache-tomcat-9.0.6
 export JAVA_HOME=/usr/jdk1.8.0_162
-注册到service
+注册到service，编写启动脚本
 sudo gedit /etc/init.d/tomcat
-编写启动脚本
 sudo chmod u+x /etc/init.d/tomcat
 update-rc.d –f tomcat defaults 
