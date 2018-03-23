@@ -1,0 +1,20 @@
+#!/bin/bash
+export CATALINA_HOME=/usr/apache-tomcat-9.0.6
+case "$1" in
+"start")
+        echo "$0正在启动..."
+        $CATALINA_HOME/bin/startup.sh
+        echo "$0已启动"
+;;
+"stop")
+        echo "$0正在结束..."
+        $CATALINA_HOME/bin/shutdown.sh
+        echo "$0已停止"
+;;
+"restart")
+        echo "正在结束..."
+        $CATALINA_HOME/bin/shutdown.sh
+        echo "正在启动..."
+        $CATALINA_HOME/bin/startup.sh
+;;
+esac
