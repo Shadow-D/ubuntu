@@ -62,3 +62,14 @@ export JAVA_HOME=/usr/jdk1.8.0_162
 sudo gedit /etc/init.d/tomcat
 sudo chmod u+x /etc/init.d/tomcat
 update-rc.d –f tomcat defaults 
+
+输入法消失
+https://blog.csdn.net/u012375924/article/details/78636849?locationNum=10&fps=1
+（添加
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+到~/.xprofile）
+
+常用软件
+https://blog.csdn.net/skykingf/article/details/45267517
