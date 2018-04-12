@@ -73,3 +73,12 @@ export QT_IM_MODULE=fcitx
 
 常用软件
 https://blog.csdn.net/skykingf/article/details/45267517（源文件/etc/apt/sources.list）
+
+在Ubuntu下安装Numix主题和图标
+sudo add-apt-repository ppa:numix/ppa
+sudo apt-get update
+sudo apt-get install numix-gtk-theme numix-icon-theme-circle
+如果你想安装Numix壁纸，也可以使用下面的命令：
+sudo apt-get install numix-wallpaper-*
+安装Gnome Tweak Tool:
+sudo apt-get install gnome-tweak-tool 
