@@ -1,0 +1,10 @@
+Ubuntu硬盘太小,就想将win10的D盘分给Ubuntu,格式化D盘后重启出现error:no such partition错误,原因是没有找到系统引导
+修复步骤:
+ls列出当前磁盘分区,set显示引导分区,发现引导分区不存在,通过ls (hd0,msdosX)/boot/grub找出当前引导分区,发现是(hd0,msdos5),
+然后设置引导分区,set root=(hd0,msdos5),set prefix=(hd0,msdos5)/boot/grub,
+设置启动模式,insmod normal,启动,normal,
+进入系统选择界面,win10正常启动,但Ubuntu一直循环停止开启一个nvidia的服务,因为驱动是刚装的,所以推测是驱动的问题,
+进入系统选择界面,选择advance options,选择一个recovery mode,打开命令行,执行apt-get remove nvidia*,提示read-only file system,
+以读写方式重新挂载文件系统,mount -o remount rw /,rm -rf /etc/.pwd.lock,
+执行apt-get remove nvidia*,重启后可以进入Ubuntu系统了,
+进入终端,重新安装grub2,执行sudo apt-get install grup2,sudo update-grub,grub-install /dev/sda,重启
