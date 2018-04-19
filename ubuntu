@@ -17,6 +17,11 @@ sudo vim /etc/profile
 export JAVA_HOME=/usr/jdk1.8.0_162
 export PATH=$JAVA_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar: $JAVA_HOME/lib/tools.jar
+////
+sudo add-apt-repository ppa:webupd8team/java    
+sudo apt-get update    
+sudo apt-get install oracle-java8-installer   
+
 
 
 安装pycharm
