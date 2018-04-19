@@ -72,7 +72,7 @@ export QT_IM_MODULE=fcitx
 到~/.xprofile）
 
 常用软件
-https://blog.csdn.net/skykingf/article/details/45267517（源文件/etc/apt/sources.list）
+https://blog.csdn.net/skykingf/article/details/45267517（源文件/etc/apt/sources.list  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys (提示的key)）
 
 在Ubuntu下安装Numix主题和图标
 sudo add-apt-repository ppa:numix/ppa
