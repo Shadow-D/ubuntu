@@ -43,7 +43,7 @@ dpkg -i qq/fonts-wqy-microhei_0.2.0-beta-2_all.deb
 #apt-get install sogoupinyin
 
 #安装配置java10
-wget http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_linux-x64_bin.tar.gz
+wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_linux-x64_bin.tar.gz
 tar -xzvf jdk-10.0.1_linux-x64_bin.tar.gz -C /usr
 (
 cat << EOF
