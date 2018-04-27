@@ -28,6 +28,16 @@ ln -s /usr/bin/python3 /usr/bin/python
 #安装pycharm
 snap install pycharm-community --classic
 
+#安装QQ
+#qq.zip放在根目录
+apt-get install libgtk2.0-0:i386 lib32ncurses5
+unzip -x qq.zip
+dpkg -i qq/wine-qqintl_0.1.3-2_i386.deb
+apt-get install -f
+dpkg -i qq/wine-qqintl_0.1.3-2_i386.deb
+dpkg -i qq/ttf-wqy-microhei_0.2.0-beta-2_all.deb
+dpkg -i qq/fonts-wqy-microhei_0.2.0-beta-2_all.deb
+
 #安装搜狗输入法
 #echo "deb http://archive.ubuntukylin.com:10006/ubuntukylin trusty main" >> /etc/apt/sources.list
 #apt-get install sogoupinyin
