@@ -48,8 +48,8 @@ tar -xzvf jdk-10.0.1_linux-x64_bin.tar.gz -C /usr
 (
 cat << EOF
 export JAVA_HOME=/usr/jdk-10.0.1
-export PATH=$JAVA_HOME/bin:$PATH
-export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=\$JAVA_HOME/bin:\$PATH
+export CLASSPATH=.:\$JAVA_HOME/lib/dt.jar:\$JAVA_HOME/lib/tools.jar
 EOF
 ) >> /etc/profile
 source /etc/profile
