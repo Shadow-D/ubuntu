@@ -1,0 +1,19 @@
+恢复文件ubuntu.sh
+
+安装extundelete
+sudo apt-get install extundelete    
+
+将要恢复的分区卸载或挂载为只读，防止数据被覆盖使用。
+mount -r -n -o remount /dev/sda7
+
+用df -h查看挂载分区
+
+extundelete /dev/sda7 --restore-file /home/shadz/PycharmProjects/test/ubuntu.sh
+extundelete执行完毕后在当前目录生产一个RECOVERED_FILES目录，里面即是恢复出来的文件。
+
+
+
+恢复某个文件夹的内容，可以使用下面命令：
+extundelete /dev/sda7 --restore-directory /home/shadz/PycharmProjects/test/
+
+
