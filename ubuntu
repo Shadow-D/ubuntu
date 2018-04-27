@@ -1,5 +1,8 @@
 版本ubuntu17.10
 
+底部状态栏
+apt-get install cairo-dock
+
 修改默认python版本
 sudo apt-get install python3.7
 rm /usr/bin/python
